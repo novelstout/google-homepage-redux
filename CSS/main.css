@@ -1,64 +1,61 @@
-body{
-    height: 100vh;
-    width: 100vh;
-}
-
-li {
-    float: left;
-
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
+/* *{
+    box-sizing: border-box;
     padding: 0;
+    margin: 0;
 }
 
-.apps {
-    width: 25px;
-    height: auto;
-    grid-area: header;
-    background-color: rgb(0, 255, 255);
+May or may not need the above bit? 
+*/
+
+html {
+    height: 100%;
+    width: auto;
 }
 
 .nav {
-    grid-area: header;
-    background-color: rgb(206, 52, 52);
+    background-color: cadetblue;
+    grid-area: 1/1/2/7;
+    /* display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 5px;
+
+    Will use the above to position navbar links with grid.
+    */
+
+}
+
+.apps {
+    height: 25px;
+    width: auto;
 }
 
 .logoarea {
-    grid-area: main;
+    background-color: slategray;
+    grid-area:  3/1/4/7;
     justify-self: center;
-    background-color: rgb(89, 89, 212);
+    align-self: center;
 }
 
 .search {
-    grid-area: middle;
+    background-color: tomato;
+    grid-area:  4/1/5/7;
     justify-self: center;
-    background-color: green;
+    align-self: center;
 }
 
 .buttons {
-    grid-area: bottom;
+    background-color: rosybrown;
+    grid-area:  5/1/6/7;
     justify-self: center;
 }
 
-.footer{
-    grid-area: bottom;
+.footer-content {
+    background-color: bisque
 }
 
 .container {
     display: grid;
-    height: 100vh;
-    width: auto;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr); 
-    grid-template-areas: 
-    "header header header header"
-    ". main main ."
-    ". middle middle ."
-    ". bottom bottom .";
-    column-gap: 5px;
-    row-gap: 5px;
-    background-color: orange;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
 }
