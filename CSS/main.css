@@ -17,31 +17,86 @@ body {
     font-family: arial, sans-serif;
 }
 
-/*
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 5%;
+    width: 100%;
+    background-color: #f2f2f2;
+    
+    
+}
+
+
 a {
     text-decoration: none;
     color: #222;
-} */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
 
 .nav {
     background-color: white;
-    grid-area: 1/1/2/7;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 5px;
+    grid-template-columns: repeat(2, 50px) 1fr repeat(3, 50px) 96px;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "about store . gmail images apps login";
+    grid-gap: 3px;
+    justify-items: center;
+    align-items: center;
+}
 
+#about {
+    grid-area: about;
+}
+
+#store {
+    grid-area: store;
+}
+
+#gmail {
+    grid-area: gmail;
+    font-size: 13px;
+}
+
+#images {
+    grid-area: images;
+    font-size: 13px;
+}
+
+#apps {
+    grid-area: apps;
+}
+
+#login {
+    grid-area: login;
 }
 
 .apps {
-    height: 25px;
+    height: 20px;
     width: auto;
 }
 
 .login {
-    background-color: #2b7de9;
+    min-width: 96px;
+    background-color: #1a73e8;
     border: 0;
     color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 9px 23px;
+    margin-left: 8px;
+    margin-right: 8px;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: .25px;
+    line-height: 16px;
 }
 
 .buttons {
@@ -67,19 +122,11 @@ a {
 }
 
 .logoarea {
-    position: relative;
-    padding: 10px;
-    top: 10px;
     grid-area:  3/1/4/7;
-    justify-self: center;
 }
 
 .search {
-    position: relative;
-    bottom: 12px;
     grid-area:  4/1/5/7;
-    justify-self: center;
-    align-self: center;
 }
 
 #searchbar {
@@ -90,18 +137,25 @@ a {
 }
 
 .buttonarea {
-    position: relative;
-    bottom: 20px;
     grid-area:  5/1/6/7;
-    justify-self: center;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 100px 100px 150px 1fr 100px 100px 100px;
+    grid-template-rows: 50px;
+    justify-items: center;
+    align-items: center;
 }
 
 .footer-content {
-    background-color: bisque
+    color: #70757a;
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
+    justify-items: center;
+    align-items: center;
 }
